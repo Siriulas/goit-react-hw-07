@@ -1,7 +1,7 @@
 
 import ContactList from "./ContactList";
-import ContactForm from "./ContactsForm";
-import SearchBox from "./SearcBox";
+import ContactForm from "./ContactForm";
+import SearchBox from "./SearchBox";
 
 
 export default function App(){
