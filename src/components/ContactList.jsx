@@ -13,7 +13,7 @@ export default function ContactList() {
       <ul>
         {filteredContacts.map((item) => (
           <li key={item.id}>
-            <Contact item={item} />
+            <Contact name={item.name} number={item.number} />
           </li>
         ))}
       </ul>
