@@ -10,15 +10,17 @@ export default function ContactForm() {
     setName(event.target.value);
   };
 
-  const handleAdd = () => {
-    dispatch(addContact({ id: Date.now(), name })); 
-    setName("");
-  };
+const handleSubmit = (event) => {
+  event.preventDefault(); 
+  dispatch(addContact({ id: Date.now(), name }));
+  setName("");
+};
 
-  return (
-    <div>
-      <input type="text" value={name} onChange={handleChange} />
-      <button onClick={handleAdd}>Add contact</button>
-    </div>
-  );
+return (
+  <form onSubmit={handleSubmit}>
+    <input type="text" value={name} onChange={handleChange} />
+    <button type="submit">Add contact</button>
+  </form>
+);
+
 }
